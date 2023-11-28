@@ -20,6 +20,8 @@ cards.forEach(card => {
 cancelarButton.addEventListener('click', () => {
   cardContainer.classList.remove("blur");
   ventanaEmergente.dataset.visible = "false";
+  clearForm();
+
 });
 
 function Book(title, autor, pages, read) {
@@ -42,6 +44,7 @@ function addBookToLibrary() {
   cardContainer.classList.remove("blur");
   ventanaEmergente.dataset.visible = "false";
   actualizarCards();
+  clearForm();
 }
 
 newBookButton.addEventListener("click", mostrarForm);
@@ -87,10 +90,17 @@ const editCancel = document.querySelector(".emergente.cancelar.edit");
 editCancel.addEventListener("click", () => {
   cardContainer.classList.remove("blur");
   ventanaEmergente.dataset.visible = "false";
+  clearForm();
 });
 
 
 function clearForm() {
+  let inputs = document.querySelectorAll(".input-form");
+  inputs.forEach((e) => {
+    if (e.type == "checkbox")
+      e.checked = false;
+    e.value = "";
+  });
 
 }
 
@@ -112,7 +122,7 @@ function editCard(card, index) {
     card.querySelector(".card-title").textContent = myLibrary[index].title = title;
     card.querySelector(".card-autor").textContent = myLibrary[index].autor = autor;
     card.querySelector(".card-pages").textContent = myLibrary[index].pages = pages;
-    card.querySelector(".card-read").textContent = myLibrary[index].read = read;
-
+    card.querySelector(".card-read").textContent = myLibrary[index].read = read ? "Read" : "Not yet";
+    clearForm();
   });
 }
