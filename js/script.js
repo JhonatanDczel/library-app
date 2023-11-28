@@ -58,6 +58,14 @@ function actualizarCards() {
     newCard.querySelector(".card-autor").textContent = book.autor;
     newCard.querySelector(".card-pages").textContent = book.pages;
     newCard.querySelector(".card-read").textContent = book.pages ? "Read" : "Not yet";
+
+    let deleteButton = newCard.querySelector(".delete-button");
+    deleteButton.addEventListener('click', () => {
+      newCard.remove();
+      index = myLibrary.indexOf(book);
+      myLibrary.splice(index, 1);
+    });
+
     newCard.classList.remove("card-template");
     newCard.classList.add("card");
 
