@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Nova+Square&display=swap');
 
-* {box-sizing: border-box; font-family: 'Nova Square', sans-serif;}
+* {margin:0; padding: 0; box-sizing: border-box; font-family: 'Nova Square', sans-serif;}
 h2, h1{
   margin: 0;
   padding: 0;
@@ -38,13 +38,23 @@ header {
   justify-content: space-between;
 }
 
+header > button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+}
+
 main {
   border-radius: 16px;
   display: grid;
   flex: 1;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-template-rows: 200px;
-  grid-auto-rows: 200px;
+  grid-template-columns: repeat(auto-fit, 220px);
+  grid-template-rows: 220px;
+  grid-auto-rows: 220px;
   gap: 16px;
   padding: 32px;
   filter: blur(0);
@@ -54,14 +64,87 @@ main {
 }
 
 .card{
-  background-color: #f5dd55;
+  background-color: #F5F26D;
   border-radius: 15px;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, auto);
+  align-items: start;
+  justify-items: center;
+  overflow: auto;
 }
+
+.card > h2 {
+  margin-bottom: 2px;
+}
+
+.card > label {
+  font-size: .9em;
+  background-color: #fffa;
+  padding: 2px 9px;
+  border-radius: 8px;
+  color: #000b;
+}
+
+.card > div {
+  color: #000a;
+}
+
+.card > button {
+  background-color: #e9dd04;
+  border: none;
+  padding: 2px 8px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.card-title {
+  grid-column: span 6;
+  text-align: center;
+}
+
+.label-autor {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.card-autor {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.label-pages {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.card-pages{
+  grid-column: span 3;
+  text-align: center;
+}
+
+.card-read {
+  grid-column: span 6;
+  text-align: center;
+}
+
+.label-read{
+  grid-column: span 6;
+  text-align: center;
+}
+
+.edit-button {
+  text-align: center;
+  grid-column: span 3;
+}
+
+.delete-button{
+  grid-column: span 3;
+  text-align: center;
+}
+
+
 
 .card > h2 {
   text-align: center;
