@@ -48,6 +48,10 @@ main {
   width: 400px;
 }
 
+.card-template {
+  display: none;
+}
+
 main.blur{
   filter: blur(5px);
 }
