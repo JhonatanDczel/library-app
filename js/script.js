@@ -1,4 +1,8 @@
-const myLibrary = [];
+let bookD1 = new Book("The iliad", "Homer", "123", true);
+let bookD2 = new Book("The Great Gatsby", "Scott", "180", false);
+let bookD3 = new Book("To Kill a Mockingbird", "Haper Lee", "281", false);
+let bookD4 = new Book("1984", "George Orwell", "328", true);
+const myLibrary = [bookD1, bookD2, bookD3, bookD4];
 const ventanaEmergente = document.querySelector('.ventana-emergente');
 const addBookForm = document.querySelector('.ventana-emergente > form');
 const newBookButton = document.getElementById("new-button");
@@ -10,6 +14,7 @@ const cardTemplate = document.querySelector(".card-template").cloneNode(true);
 const editCardContainer = document.querySelector('.ventana-emergente.edit-card');
 
 
+actualizarCards();
 aceptarButton.addEventListener('click', addBookToLibrary);
 
 cards.forEach(card => {

@@ -11,7 +11,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.5rem;
 }
 
 html, body{
@@ -56,7 +56,18 @@ main {
 .card{
   background-color: #f5dd55;
   border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
 }
+
+.card > h2 {
+  text-align: center;
+}
+
+
 
 .ventana-emergente:not([data-visible="true"]){
   display: none;
