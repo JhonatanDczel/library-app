@@ -93,7 +93,7 @@ let indexEditingNow;
 const editAceptar = document.querySelector(".emergente.aceptar.edit");
 const editCancel = document.querySelector(".emergente.cancelar.edit");
 editCancel.addEventListener("click", () => {
-  cardContainer.classList.remove("blur");
+  editCardContainer.classList.remove("blur");
   ventanaEmergente.dataset.visible = "false";
   clearForm();
 });
