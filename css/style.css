@@ -202,50 +202,44 @@ main {
 }
 
 
-/* Ocultar el checkbox original */
 input[type="checkbox"] {
   display: none;
 }
 
-/* Estilo del contenedor personalizado */
 .checkbox-container {
   display: inline-block;
   position: relative;
-  padding-left: 25px; /* Espacio para el pseudo-elemento */
+  padding-left: 25px;
   cursor: pointer;
   border-radius: 10px;
 }
 
-/* Estilo del pseudo-elemento que actúa como el nuevo checkbox */
 .checkbox-container::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  width: 20px; /* Ancho del pseudo-elemento */
-  height: 20px; /* Altura del pseudo-elemento */
-  border: 2px solid #333; /* Borde del pseudo-elemento */
-  background-color: #fff; /* Fondo del pseudo-elemento */
+  width: 20px;
+  height: 20px; 
+  border: 2px solid transparent;
+  background-color: #fff; 
   border-radius: 10px;
 }
 
-/* Estilo del pseudo-elemento que actúa como la marca del checkbox */
 .checkbox-container::after {
-  content: '\2713'; /* Símbolo de marca (puedes cambiarlo) */
+  content: '\2713'; 
   position: absolute;
-  left: 4px; /* Ajuste para centrar la marca */
-  top: 1px; /* Ajuste para centrar la marca */
-  font-size: 16px; /* Tamaño de la marca */
-  color: #333; /* Color de la marca */
-  visibility: hidden; /* Inicialmente oculto */
+  left: 4px;
+  top: 1px;
+  font-size: 16px;
+  color: #333;
+  visibility: hidden;
 }
 
-/* Estilo cuando el checkbox está marcado */
 input[type="checkbox"]:checked + .checkbox-container::before {
-  background-color: #aaffaa; /* Cambia el fondo cuando está marcado */
+  background-color: #aaffaa;
 }
 
-/* Estilo cuando el checkbox está marcado (mostrar la marca) */
 input[type="checkbox"]:checked + .checkbox-container::after {
   visibility: visible;
 }
