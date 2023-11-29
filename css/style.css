@@ -56,9 +56,9 @@ main {
   border-radius: 16px;
   display: grid;
   flex: 1;
-  grid-template-columns: repeat(auto-fit, 220px);
-  grid-template-rows: 220px;
-  grid-auto-rows: 220px;
+  grid-template-columns: repeat(auto-fit, 13.7rem);
+  grid-template-rows: 13.7rem;
+  grid-auto-rows: 13.7rem;
   gap: 16px;
   padding: 32px;
   filter: blur(0);
@@ -275,4 +275,35 @@ button:hover{
   cursor: pointer;
   background-color: #666;
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 900px){
+  html{
+    font-size: 13px;
+  }
+
+  body {
+    padding: 0;
+    gap: 4px;
+  }
+  main {
+    padding: 24px;
+    border-radius: 0;
+    grid-template-columns: repeat(auto-fit, 13rem);
+    grid-template-rows: 13rem;
+    grid-auto-rows: 13rem;
+  }
+  header {
+    border-radius: 0;
+  }
+  .card {
+    gap: 0;
+    margin: 0;
+  }
+  .ventana-emergente{
+    justify-content: space-between;
+    width: 200px;
+    left: 0;
+    top: 0;
+  }
 }
